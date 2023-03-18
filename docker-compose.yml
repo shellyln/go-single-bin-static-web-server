@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  wordpress:
+    image: shellyln/x-static-web-server-proto:latest
+    container_name: myhttpd
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      PORT: 8080

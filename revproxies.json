@@ -1,0 +1,24 @@
+[
+    {
+        "scheme": "http",
+        "host": "127.0.0.1:3000",
+        "path": "/api/v1/",
+        "reqHeaders": {
+            "X-Proxy-Req-Header": "hello"
+        },
+        "resHeaders": {
+            "X-Proxy-Res-Header": "world"
+        }
+    },
+    {
+        "scheme": "http",
+        "host": "127.0.0.1:3001",
+        "path": "/api/v2/",
+        "reqHeaders": {
+            "X-Proxy-Req-Header": "hello"
+        },
+        "resHeaders": {
+            "X-Proxy-Res-Header": "world"
+        }
+    }
+]
