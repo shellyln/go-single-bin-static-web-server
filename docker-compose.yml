@@ -1,7 +1,7 @@
 version: '3'
 services:
 
-  wordpress:
+  myhttpd:
     image: shellyln/go-single-bin-static-web-server:latest
     container_name: myhttpd
     restart: always
