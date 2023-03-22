@@ -27,3 +27,4 @@ tmp/
 
 
 myhttpd
+!/initd/**/myhttpd

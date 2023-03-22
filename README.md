@@ -47,6 +47,17 @@ make docker
 docker compose up
 ```
 
+
+### Init script for OpenWrt
+
+```bash
+/etc/init.d/myhttpd enable
+/etc/init.d/myhttpd start
+/etc/init.d/myhttpd stop
+/etc/init.d/myhttpd disable
+```
+
+
 ## Features
 
 * Serve static contents
