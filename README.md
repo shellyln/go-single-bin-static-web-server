@@ -18,6 +18,12 @@ cd go-single-bin-static-web-server
 # Create a fork on GitHub on your account and change remote
 gh repo fork --remote=true --fork-name my-server
 
+# Fix module name
+vi go.mod
+cat go.mod
+> module github.com/your-name/my-server
+> go 1.18
+
 # Setup your contents
 vi static/index.html
 
