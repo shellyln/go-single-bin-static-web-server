@@ -47,16 +47,35 @@ make docker
 docker compose up
 ```
 
-
 ### Init script for OpenWrt
 
 ```bash
+cp myhttpd /root/bin/.
+chmod 711 /root/bin/myhttpd
+cp initd/openwrt/etc/init.d/myhttpd /etc/init.d/.
+chmod 755 /etc/init.d/myhttpd
+
 /etc/init.d/myhttpd enable
 /etc/init.d/myhttpd start
 /etc/init.d/myhttpd stop
 /etc/init.d/myhttpd disable
 ```
 
+### Init script for Systemd
+
+```bash
+cp myhttpd /usr/local/bin/.
+chmod 711 /usr/local/bin/myhttpd
+cp initd/systemd/etc/default/myhttpd /etc/default/.
+chmod 644 /etc/default/myhttpd
+cp initd/systemd/etc/systemd/system/myhttpd.service /etc/systemd/system/.
+chmod 644 /etc/systemd/system/myhttpd.service
+
+systemctl enable myhttpd
+systemctl start myhttpd
+systemctl stop myhttpd
+systemctl disable myhttpd
+```
 
 ## Features
 
